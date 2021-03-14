@@ -1,7 +1,6 @@
 ---
 date: 2019-08-13T22:40:32Z
 title: Ne Te Quaesiveris Extra
-author: Ralph Waldo Emerson
 hero_image: "/content/images/pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg"
 
 ---

@@ -1,4 +1,4 @@
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from 'gatsby';
 
 export default function useBlogData() {
   const data = useStaticQuery(graphql`
@@ -9,17 +9,16 @@ export default function useBlogData() {
             id
             frontmatter {
               date(formatString: "MMMM Do, YYYY")
-              author
               title
               hero_image {
                 childImageSharp {
-                  fluid( maxWidth: 800 ) {
+                  fluid(maxWidth: 800) {
                     ...GatsbyImageSharpFluid
                   }
                 }
               }
             }
-            excerpt(pruneLength: 200)
+            excerpt(pruneLength: 120)
             fields {
               slug
             }
@@ -27,6 +26,6 @@ export default function useBlogData() {
         }
       }
     }
-  `)
-  return data.allMarkdownRemark.edges
+  `);
+  return data.allMarkdownRemark.edges;
 }

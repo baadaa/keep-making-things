@@ -1,16 +1,16 @@
 {
-  "name": "foresry-starter-blog-gatsby",
+  "name": "keep-making-things",
   "private": true,
-  "description": "A simple starter blog to get up and developing quickly with Forestry & Gatsby",
+  "description": "Personal creation journal based on foresry-starter-blog-gatsby",
   "license": "MIT",
   "version": "0.1.0",
-  "author": "kendall strautman",
+  "author": "Bumhan Yu",
   "scripts": {
     "build": "gatsby build",
     "dev": "gatsby develop -o",
-    "develop": "yarn dev",
+    "develop": "npm run dev",
     "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "yarn dev",
+    "start": "npm run dev",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "forestry-preview": "gatsby develop -p 8080 -H 0.0.0.0"
@@ -36,14 +36,21 @@
     "webpack": "^4.43.0"
   },
   "devDependencies": {
-    "prettier": "^1.18.2"
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.22.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-config-wesbos": "^1.0.1",
+    "eslint-plugin-html": "^6.1.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "prettier": "^2.2.1"
   },
   "keywords": [
     "gatsby",
-    "forestry"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/kendallstrautman/brevifolia-gatsby-forestry"
-  }
+    "keep-making-things"
+  ]
 }

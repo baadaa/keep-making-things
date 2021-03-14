@@ -1,12 +1,13 @@
-import React from "react"
-import { Link } from "gatsby"
-import headerStyles from "../styles/components/header.module.scss"
+import React from 'react';
+import { Link } from 'gatsby';
+import headerStyles from '../styles/components/header.module.scss';
 
-export default function Header(props) {
+export default function Header({ page, title }) {
   return (
     <header
-      className={`${headerStyles.header} ${props.page === 'info' &&
-        headerStyles.info_page}`}
+      className={`${headerStyles.header} ${
+        page === 'info' && headerStyles.info_page
+      }`}
     >
       <nav
         className={headerStyles.header__nav}
@@ -14,25 +15,19 @@ export default function Header(props) {
         aria-label="main navigation"
       >
         <Link to="/">
-          <h1>{props.title}</h1>
+          <h1>{title}</h1>
         </Link>
         <div>
           <h1>
             <Link
-              to={
-                props.page === 'info'
-                  ? "/"
-                  : "/info"
-              }
+              to={page === 'info' ? '/' : '/info'}
               activeClassName={headerStyles.navItemActive}
             >
-              {props.page === 'info'
-                ? "close"
-                : "info"}
+              {page === 'info' ? 'close' : 'info'}
             </Link>
           </h1>
         </div>
       </nav>
     </header>
-  )
+  );
 }

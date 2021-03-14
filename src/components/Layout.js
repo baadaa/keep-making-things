@@ -1,18 +1,18 @@
-import React from "react"
-import Header from "./Header"
-import Helmet from "react-helmet"
-import useSiteMetadata from "../static_queries/useSiteMetadata"
-import layoutStyles from "../styles/components/layout.module.scss"
+import React from 'react';
+import Helmet from 'react-helmet';
+import Header from './Header';
+import useSiteMetadata from '../static_queries/useSiteMetadata';
+import layoutStyles from '../styles/components/layout.module.scss';
 
-export default function Layout(props) {
-  const { title, description } = useSiteMetadata()
+export default function Layout({ page, bgColor, children }) {
+  const { title, description } = useSiteMetadata();
   return (
     <section
       className={`${layoutStyles.layout} ${
-        props.page === "info" && 
-        layoutStyles.info_page}`}
+        page === 'info' && layoutStyles.info_page
+      }`}
       style={{
-        backgroundColor: props.bgColor,
+        backgroundColor: bgColor,
       }}
     >
       <Helmet>
@@ -20,8 +20,8 @@ export default function Layout(props) {
         <title>{title}</title>
         <meta name="description" content={description} />
       </Helmet>
-      <Header page={props.page} title={title} />
-      <div className={layoutStyles.content}>{props.children}</div>
+      <Header page={page} title={title} />
+      <div className={layoutStyles.content}>{children}</div>
     </section>
-  )
+  );
 }
