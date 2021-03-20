@@ -34,14 +34,18 @@ export default function Blog({ data }) {
     <Layout>
       <article className={blogTemplateStyles.blog}>
         <figure className={blogTemplateStyles.blog__hero}>
-          <Img
-            fluid={dataProp.frontmatter.hero_image.childImageSharp.fluid}
-            alt={dataProp.frontmatter.title}
-          />
+          {dataProp.frontmatter.hero_image.childImageSharp.fluid && (
+            <Img
+              fluid={dataProp.frontmatter.hero_image.childImageSharp.fluid}
+              alt={dataProp.frontmatter.title}
+            />
+          )}
         </figure>
         <div className={blogTemplateStyles.blog__info}>
           <h1>{dataProp.frontmatter.title}</h1>
-          <h3>{dataProp.frontmatter.date}</h3>
+          <time dateTime={dataProp.frontmatter.isoDate}>
+            {dataProp.frontmatter.formattedDate}
+          </time>
         </div>
         <div
           className={blogTemplateStyles.blog__body}
@@ -103,8 +107,10 @@ export const getPostData = graphql`
       }
       frontmatter {
         title
-        date(formatString: "MMMM Do, YYYY")
+        formattedDate: date(formatString: "MMMM Do, YYYY")
+        isoDate: date(formatString: "YYYY-MM-DD")
         hero_image {
+          publicURL
           childImageSharp {
             fluid(maxWidth: 1500) {
               ...GatsbyImageSharpFluid

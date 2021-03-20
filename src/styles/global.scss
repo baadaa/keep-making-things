@@ -26,8 +26,10 @@ ul {
 //TYPOGRAPHY-------------------------------------
 
 h1,
+blockquote p,
 h2,
 h3,
+time,
 h4,
 h5,
 h6,
@@ -36,11 +38,13 @@ p {
 }
 
 h1,
+blockquote p,
 h2 {
   font-weight: 500;
 }
 
-h1 {
+h1,
+blockquote p {
   font-size: 2rem;
   letter-spacing: -1px;
   line-height: 1.1875;
@@ -53,7 +57,8 @@ h2 {
   margin-bottom: 0;
 }
 
-h3 {
+h3,
+time {
   font-size: 1.2rem;
   letter-spacing: -0.5px;
   line-height: 1.1875;
@@ -77,7 +82,8 @@ p {
 }
 
 @media (min-width: 1280px) {
-  h1 {
+  h1,
+  blockquote p {
     font-size: 2rem;
     letter-spacing: -1px;
     line-height: 1.1875;
@@ -89,7 +95,8 @@ p {
     line-height: 1.1667;
   }
 
-  h3 {
+  h3,
+  time {
     letter-spacing: -0.5px;
     line-height: 1.1875;
     color: #a0a0a0;

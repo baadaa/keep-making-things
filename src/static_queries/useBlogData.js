@@ -8,7 +8,8 @@ export default function useBlogData() {
           node {
             id
             frontmatter {
-              date(formatString: "MMMM Do, YYYY")
+              formattedDate: date(formatString: "MMMM Do, YYYY")
+              isoDate: date(formatString: "YYYY-MM-DD")
               title
               hero_image {
                 childImageSharp {

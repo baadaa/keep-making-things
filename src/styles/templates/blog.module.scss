@@ -1,5 +1,6 @@
 .blog {
-  h1 {
+  h1,
+  blockquote {
     margin-bottom: 0.7rem;
   }
 }
@@ -20,10 +21,12 @@
   width: 100%;
   max-width: 768px;
   margin: 0 auto;
-  h1 {
+  h1,
+  blockquote {
     margin-bottom: 0.66rem;
   }
-  h3 {
+  h3,
+  time {
     margin-bottom: 0;
   }
 }
@@ -41,7 +44,14 @@
   :last-child {
     margin-bottom: 0;
   }
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  blockquote,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  time {
     font-weight: normal;
     padding: 1.5rem 1rem;
     line-height: 1.2;
@@ -53,7 +63,8 @@
   ul {
     list-style: initial;
   }
-  ul, ol {
+  ul,
+  ol {
     margin-left: 1.25rem;
     margin-bottom: 1.25rem;
     padding-left: 1.45rem;
@@ -89,14 +100,22 @@
   .blog__body {
     max-width: 800px;
     padding: 0 2rem;
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    blockquote,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    time {
       padding: 1.5rem;
     }
     span {
       width: 100%;
       margin: 1rem auto;
     }
-    ul, ol {
+    ul,
+    ol {
       margin-left: 1.5rem;
       margin-bottom: 1.5rem;
     }
@@ -111,7 +130,8 @@
   .blog__info {
     text-align: center;
     padding: 2rem 0;
-    h1 {
+    h1,
+    blockquote {
       max-width: 500px;
       margin: 0 auto 0.66rem auto;
     }
