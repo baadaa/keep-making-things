@@ -2,13 +2,9 @@ import React from 'react';
 import { Link } from 'gatsby';
 import headerStyles from '../styles/components/header.module.scss';
 
-export default function Header({ page, title }) {
+export default function Header({ page, title, toggleInfo }) {
   return (
-    <header
-      className={`${headerStyles.header} ${
-        page === 'info' && headerStyles.info_page
-      }`}
-    >
+    <header className={headerStyles.header}>
       <nav
         className={headerStyles.header__nav}
         role="navigation"
@@ -18,14 +14,11 @@ export default function Header({ page, title }) {
           <h1>{title}</h1>
         </Link>
         <div>
-          <h1>
-            <Link
-              to={page === 'info' ? '/' : '/info'}
-              activeClassName={headerStyles.navItemActive}
-            >
+          <h2>
+            <button type="button" onClick={toggleInfo}>
               {page === 'info' ? 'close' : 'info'}
-            </Link>
-          </h1>
+            </button>
+          </h2>
         </div>
       </nav>
     </header>

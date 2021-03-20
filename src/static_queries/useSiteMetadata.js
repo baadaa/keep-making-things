@@ -8,15 +8,6 @@ export default function useSiteMetadata() {
           title
           description
           repoUrl
-          infoData {
-            contact {
-              website
-              email
-              github_handle
-            }
-            description
-            background_color
-          }
         }
       }
     }

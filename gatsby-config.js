@@ -1,5 +1,3 @@
-const infoData = require('./content/data/info.json');
-
 module.exports = {
   // this makes the site config available to forestry cms
   siteMetadata: {
@@ -8,7 +6,6 @@ module.exports = {
     repoUrl: 'https://github.com/baadaa/keep-making-things.git',
     about: `Bumhan Yu is making things`,
     contact: { email: 'bumhan.yu@gmail.com', github_handle: 'baadaa' },
-    infoData,
   },
   plugins: [
     'gatsby-plugin-sass',

@@ -1,16 +1,29 @@
 .header {
   h1 {
-    margin-bottom: 0; 
+    margin-bottom: 0;
+  }
+  h1::after {
+    content: "Make. Record. Repeat.";
+    font-size: 50%;
+    margin-top: 0.5em;
+    display: none;
+    opacity: 0.7;
   }
 }
 
 .header__nav {
   padding: 1.5rem 1.25rem;
-  border-bottom: 1px solid #EBEBEB;
+  border-bottom: 1px solid #ebebeb;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
+  button {
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+  }
   img {
     margin-bottom: 0;
   }
@@ -24,11 +37,11 @@
     left: 0;
     top: 0;
   }
-  
+
   .header__nav {
     padding: 2rem;
     height: 100%;
-    border-right: 1px solid #EBEBEB;
+    border-right: 1px solid #ebebeb;
     border-bottom: none;
     flex-direction: column;
     align-items: flex-start;
@@ -36,10 +49,16 @@
       margin-bottom: 0;
     }
   }
+  .header h1::after {
+    display: block;
+  }
 }
 
 @media (max-width: 450px) {
   .header h1 {
     font-size: 24px;
+  }
+  .header h2 {
+    font-size: 20px;
   }
 }

@@ -47,7 +47,7 @@ export default function Blog({ data }) {
           className={blogTemplateStyles.blog__body}
           dangerouslySetInnerHTML={{ __html: dataProp.html }}
         />
-        <div className={blogTemplateStyles.blog__footer}>
+        <nav className={blogTemplateStyles.blog__footer}>
           {prevPostSlug && (
             <Link
               to={`/${prevPostSlug}`}
@@ -87,7 +87,7 @@ export default function Blog({ data }) {
               </svg>
             </Link>
           )}
-        </div>
+        </nav>
       </article>
     </Layout>
   );

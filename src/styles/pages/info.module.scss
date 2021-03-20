@@ -1,8 +1,20 @@
+.wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #202020;
+}
+
 .info_blurb {
   max-width: 800px;
   padding: 1.5rem 1.25rem;
   p {
-    color: #EBEBEB;
+    color: #ebebeb;
     font-size: 1.4rem;
   }
   h2 div p {
@@ -10,13 +22,34 @@
   }
 }
 
+.closeButton {
+  position: absolute;
+  top: 1.5rem;
+  cursor: pointer;
+  right: 1.5rem;
+  color: #fff;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  @media (max-width: 450px) {
+    font-size: 20px;
+  }
+}
 @media (min-width: 768px) {
   .info_blurb {
     padding: 2rem;
   }
+  .closeButton {
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: 2rem;
+    left: 2rem;
+  }
 }
 
-@media(min-width: 1440px) {
+@media (min-width: 1440px) {
   .info_blurb {
     padding: 3rem;
   }
