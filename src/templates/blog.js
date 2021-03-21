@@ -52,7 +52,7 @@ export default function Blog({ data }) {
             style={{
               padding: '2rem',
               marginBottom: '2rem',
-              backgroundColor: '#f0f0f0',
+              backgroundColor: 'var(--introBgColor)',
             }}
           >
             {dataProp.frontmatter.intro}
@@ -76,6 +76,7 @@ export default function Blog({ data }) {
                 x="0px"
                 y="0px"
                 viewBox="0 0 26 26"
+                fill="var(--textColor)"
                 enableBackground="new 0 0 26 26"
               >
                 <path d="M23.021,12.294l-8.714-8.715l-1.414,1.414l7.007,7.008H2.687v2h17.213l-7.007,7.006l1.414,1.414l8.714-8.713  C23.411,13.317,23.411,12.685,23.021,12.294z" />
@@ -96,6 +97,7 @@ export default function Blog({ data }) {
                 x="0px"
                 y="0px"
                 viewBox="0 0 26 26"
+                fill="var(--textColor)"
                 enableBackground="new 0 0 26 26"
               >
                 <path d="M23.021,12.294l-8.714-8.715l-1.414,1.414l7.007,7.008H2.687v2h17.213l-7.007,7.006l1.414,1.414l8.714-8.713  C23.411,13.317,23.411,12.685,23.021,12.294z" />

@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import { CgEditContrast, CgInfo } from 'react-icons/cg';
 import headerStyles from '../styles/components/header.module.scss';
 
-export default function Header({ page, title, toggleInfo }) {
+export default function Header({ title, toggleInfo, toggleColor }) {
   return (
     <header className={headerStyles.header}>
       <nav
@@ -11,15 +12,16 @@ export default function Header({ page, title, toggleInfo }) {
         aria-label="main navigation"
       >
         <Link to="/">
-          <h1>{title}</h1>
+          <h5 className="h1 siteTitle">{title}</h5>
         </Link>
-        <div>
-          <h2>
-            <button type="button" onClick={toggleInfo}>
-              {page === 'info' ? 'close' : 'info'}
-            </button>
-          </h2>
-        </div>
+        <h6 className="h2">
+          <button type="button" onClick={toggleColor}>
+            <CgEditContrast color="var(--baseColor)" />
+          </button>
+          <button type="button" onClick={toggleInfo}>
+            <CgInfo color="var(--baseColor)" />
+          </button>
+        </h6>
       </nav>
     </header>
   );

@@ -1,10 +1,26 @@
 @import url("https://fonts.googleapis.com/css?family=Work+Sans&display=swap");
 
 body {
+  --baseColor: #202020;
+  --bgColor: #fff;
+  --introBgColor: #f0f0f0;
+  --textColor: #464646;
+  --lightColor: #a0a0a0;
+  --borderColor: #ebebeb;
   font-family: "Work Sans", "Helvetica Neue", Helvetica, sans-serif;
   overflow-x: hidden;
-  color: #000;
+  color: var(--baseColor);
+  background-color: var(--bgColor);
   font-size: 16px;
+  transition: background-color 0.2s, color 0.2s, border 0.2s;
+  &.isDark {
+    --baseColor: #f0f0f0;
+    --bgColor: #202020;
+    --introBgColor: #393939;
+    --textColor: #ccc;
+    --lightColor: #ddd;
+    --borderColor: #555;
+  }
 }
 
 a {
@@ -44,13 +60,15 @@ h2 {
 }
 
 h1,
+.h1,
 blockquote p {
   font-size: 2rem;
   letter-spacing: -1px;
   line-height: 1.1875;
 }
 
-h2 {
+h2,
+.h2 {
   font-size: 1.7rem;
   letter-spacing: -0.75px;
   line-height: 1.2;
@@ -62,7 +80,7 @@ time {
   font-size: 1.2rem;
   letter-spacing: -0.5px;
   line-height: 1.1875;
-  color: #a0a0a0;
+  color: var(--lightColor);
   font-weight: normal;
 }
 
@@ -70,7 +88,7 @@ p {
   font-size: 1.2rem;
   letter-spacing: -0.5px;
   line-height: 1.5;
-  color: #464646;
+  color: var(--textColor);
 }
 
 // gatsby-image plugin container-----------------
@@ -83,13 +101,15 @@ p {
 
 @media (min-width: 1280px) {
   h1,
+  .h1,
   blockquote p {
     font-size: 2rem;
     letter-spacing: -1px;
     line-height: 1.1875;
   }
 
-  h2 {
+  h2,
+  .h2 {
     font-size: 1.5rem;
     letter-spacing: -0.75px;
     line-height: 1.1667;
@@ -99,7 +119,7 @@ p {
   time {
     letter-spacing: -0.5px;
     line-height: 1.1875;
-    color: #a0a0a0;
+    color: var(--lightColor);
     font-weight: normal;
   }
 
