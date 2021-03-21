@@ -11,6 +11,7 @@ export default function useBlogData() {
               formattedDate: date(formatString: "MMMM Do, YYYY")
               isoDate: date(formatString: "YYYY-MM-DD")
               title
+              intro
               hero_image {
                 childImageSharp {
                   fluid(maxWidth: 800) {
@@ -19,7 +20,6 @@ export default function useBlogData() {
                 }
               }
             }
-            excerpt(pruneLength: 120)
             fields {
               slug
             }

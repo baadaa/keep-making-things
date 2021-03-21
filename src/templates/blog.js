@@ -47,6 +47,17 @@ export default function Blog({ data }) {
             {dataProp.frontmatter.formattedDate}
           </time>
         </div>
+        <div className={blogTemplateStyles.blog__body}>
+          <p
+            style={{
+              padding: '2rem',
+              marginBottom: '2rem',
+              backgroundColor: '#f0f0f0',
+            }}
+          >
+            {dataProp.frontmatter.intro}
+          </p>
+        </div>
         <div
           className={blogTemplateStyles.blog__body}
           dangerouslySetInnerHTML={{ __html: dataProp.html }}
@@ -109,6 +120,7 @@ export const getPostData = graphql`
         title
         formattedDate: date(formatString: "MMMM Do, YYYY")
         isoDate: date(formatString: "YYYY-MM-DD")
+        intro
         hero_image {
           publicURL
           childImageSharp {

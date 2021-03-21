@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 import Img from 'gatsby-image';
 import useBlogData from '../static_queries/useBlogData';
 import blogListStyles from '../styles/components/bloglist.module.scss';
+import { truncate } from '../utils';
 
 export default function BlogList() {
   const blogData = useBlogData();
@@ -27,7 +28,7 @@ export default function BlogList() {
                   <time dateTime={blog.node.frontmatter.isoDate}>
                     {blog.node.frontmatter.formattedDate}
                   </time>
-                  <p>{blog.node.excerpt}</p>
+                  <p>{truncate(blog.node.frontmatter.intro, 120)}</p>
                 </div>
               </li>
             </Link>

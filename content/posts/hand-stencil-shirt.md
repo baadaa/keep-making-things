@@ -2,20 +2,35 @@
 date: 2010-09-07
 title: Hand-stencil shirt
 hero_image: "/content/images/2010/0907-stencil.jpeg"
+intro: An after-work stencil fun with objects laying around. Draw simple shapes. Cut out cardboards. Print.
 ---
 
-An inexpensive shirt, used cardboard pieces, cloth dye. An evening's experiment after work.
+## Used
 
-![Sketches](/content/images/2010/0907-sketches.jpeg)
+- plain T-shirt
+- cardboard pieces
+- blade
+- T-square
+- cloth dye
+- sponge
 
-![Sketches](/content/images/2010/0907-cardboard.jpeg)
+![T-shirt ideas from my sketchbook](/content/images/2010/0907-sketches.jpeg)
+Some of random doodles from daily sketchbook.
 
-![Sketches](/content/images/2010/0907-plain-shirt.jpeg)
+![Pieces of cardboard](/content/images/2010/0907-cardboard.jpeg)
+Pieces of cardboard from online delivery.
 
-![Sketches](/content/images/2010/0907-dye.jpeg)
+![Cheap t-shirt for printing](/content/images/2010/0907-plain-shirt.jpeg)
+Cheap T-shirt from local dollar store.
 
-![Sketches](/content/images/2010/0907-stencil.jpeg)
+![Cloth dye and sponge](/content/images/2010/0907-dye.jpeg)
+A cloth dye and a piece of sponge from art supply box.
 
-![Sketches](/content/images/2010/0907-finished.jpeg)
+![Stencil preparation](/content/images/2010/0907-stencil.jpeg)
+Draw it out and cut it out.
 
-![Sketches](/content/images/2010/0907-worn.jpeg)
+![Stencil on T-shirt](/content/images/2010/0907-finished.jpeg)
+Stencil.
+
+![Man wearing custom t-shirt](/content/images/2010/0907-worn.jpeg)
+Wear.
