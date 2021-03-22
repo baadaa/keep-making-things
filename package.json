@@ -7,13 +7,12 @@
   "author": "Bumhan Yu",
   "scripts": {
     "build": "gatsby build",
-    "dev": "gatsby develop -o",
+    "dev": "gatsby develop -H 0.0.0.0",
     "develop": "npm run dev",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run dev",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-    "forestry-preview": "gatsby develop -p 8080 -H 0.0.0.0"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "dependencies": {
     "gatsby": "^2.23.12",
