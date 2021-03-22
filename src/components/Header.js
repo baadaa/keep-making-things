@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import { CgEditContrast, CgInfo } from 'react-icons/cg';
 import headerStyles from '../styles/components/header.module.scss';
 
-export default function Header({ title, toggleInfo, toggleColor }) {
+export default function Header({ toggleInfo, toggleColor }) {
   return (
     <header className={headerStyles.header}>
       <nav
@@ -12,7 +12,7 @@ export default function Header({ title, toggleInfo, toggleColor }) {
         aria-label="main navigation"
       >
         <Link to="/">
-          <h5 className="h1 siteTitle">{title}</h5>
+          <h5 className="h1 siteTitle">Keep making things</h5>
         </Link>
         <h6 className="h2">
           <button type="button" onClick={toggleColor}>

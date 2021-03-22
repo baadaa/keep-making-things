@@ -1,9 +1,10 @@
 module.exports = {
   // this makes the site config available to forestry cms
   siteMetadata: {
-    title: 'Keep Making Things',
+    title: 'Keep making things',
     description: 'Keep making and keep documenting them. A personal project',
     repoUrl: 'https://github.com/baadaa/keep-making-things.git',
+    siteUrl: 'https://www.keepmakingthings.com',
     about: `Bumhan Yu is making things`,
     contact: { email: 'bumhan.yu@gmail.com', github_handle: 'baadaa' },
   },

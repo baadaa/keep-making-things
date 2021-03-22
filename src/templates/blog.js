@@ -6,10 +6,14 @@ import useBlogData from '../static_queries/useBlogData';
 import blogTemplateStyles from '../styles/templates/blog.module.scss';
 // this component handles the blur img & fade-ins
 
-export default function Blog({ data }) {
+export default function Blog({ data, location }) {
   const dataProp = data.markdownRemark;
   const allBlogData = useBlogData();
-
+  const seo = {
+    title: dataProp.frontmatter.title,
+    description: dataProp.frontmatter.intro,
+    image: dataProp.frontmatter.hero_image.publicURL,
+  };
   function getNextSlug(slug) {
     const allSlugs = allBlogData.map((blog) => blog.node.fields.slug);
     const nextSlug = allSlugs[allSlugs.indexOf(slug) + 1];
@@ -31,7 +35,7 @@ export default function Blog({ data }) {
   const prevPostSlug = getPrevSlug(dataProp.fields.slug);
 
   return (
-    <Layout>
+    <Layout seo={seo} location={location}>
       <article className={blogTemplateStyles.blog}>
         <figure className={blogTemplateStyles.blog__hero}>
           {dataProp.frontmatter.hero_image.childImageSharp.fluid && (
