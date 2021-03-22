@@ -69,9 +69,9 @@ blockquote p {
 
 h2,
 .h2 {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   letter-spacing: -0.75px;
-  line-height: 1.2;
+  line-height: 1.4;
   margin-bottom: 0;
 }
 
@@ -99,31 +99,21 @@ p {
   min-height: 100%;
 }
 
-@media (min-width: 1280px) {
+@media screen and (max-width: 450px) {
   h1,
   .h1,
   blockquote p {
-    font-size: 2rem;
-    letter-spacing: -1px;
-    line-height: 1.1875;
+    font-size: 1.75rem;
   }
-
   h2,
   .h2 {
-    font-size: 1.5rem;
-    letter-spacing: -0.75px;
-    line-height: 1.1667;
+    font-size: 1.3rem;
   }
-
   h3,
   time {
-    letter-spacing: -0.5px;
-    line-height: 1.1875;
-    color: var(--lightColor);
-    font-weight: normal;
+    font-size: 1rem;
   }
-
   p {
-    line-height: 1.4375;
+    font-size: 1.15rem;
   }
 }
