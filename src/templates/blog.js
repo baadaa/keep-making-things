@@ -3,12 +3,15 @@ import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 import Layout from '../components/Layout';
 import useBlogData from '../static_queries/useBlogData';
+import Claps from '../components/Claps';
+import TotalClaps from '../components/TotalClaps';
 import blogTemplateStyles from '../styles/templates/blog.module.scss';
 // this component handles the blur img & fade-ins
 
 export default function Blog({ data, location }) {
   const dataProp = data.markdownRemark;
   const allBlogData = useBlogData();
+  const currentSlug = dataProp.fields.slug;
   const seo = {
     title: dataProp.frontmatter.title,
     description: dataProp.frontmatter.intro,
@@ -50,6 +53,7 @@ export default function Blog({ data, location }) {
           <time dateTime={dataProp.frontmatter.isoDate}>
             {dataProp.frontmatter.formattedDate}
           </time>
+          <TotalClaps slug={currentSlug} />
         </div>
         <div className={blogTemplateStyles.blog__body}>
           <p
@@ -66,6 +70,7 @@ export default function Blog({ data, location }) {
           className={blogTemplateStyles.blog__body}
           dangerouslySetInnerHTML={{ __html: dataProp.html }}
         />
+        <Claps slug={currentSlug} />
         <nav className={blogTemplateStyles.blog__footer}>
           {prevPostSlug && (
             <Link

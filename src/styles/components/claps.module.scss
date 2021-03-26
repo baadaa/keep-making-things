@@ -1,0 +1,58 @@
+.clapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 800px;
+  padding: 0 1.25rem;
+  display: flex;
+  @media screen and (min-width: 768px) {
+    padding: 0 2rem;
+  }
+}
+.clickArea {
+  text-align: center;
+  margin-right: 1rem;
+}
+
+.clapBtn {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  padding: 0;
+  outline: none;
+  transition: transform 0.2s;
+  svg {
+    fill: var(--textColor);
+  }
+  &:hover {
+    transform: scale(1.15) rotate(-5deg);
+  }
+}
+
+.summary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 0;
+  margin-top: 1.5rem;
+  svg {
+    fill: var(--textColor);
+    transition: transform 0.2s;
+    &:hover {
+      transform: scale(1.1) rotate(-5deg);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    justify-content: flex-start;
+  }
+}
+
+.num {
+  margin-left: 5px;
+  font-size: small;
+}
