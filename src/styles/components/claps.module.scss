@@ -32,6 +32,9 @@
   &:hover {
     transform: scale(1.15) rotate(-5deg);
   }
+  &:active {
+    transform: scale(1.2) rotate(5deg);
+  }
 }
 
 .summary {

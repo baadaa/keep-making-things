@@ -124,7 +124,7 @@ class Claps extends Component {
           <div>
             Like what I made?
             <br />
-            Give me some claps.
+            Clap a few times.
           </div>
         </div>
       </div>
